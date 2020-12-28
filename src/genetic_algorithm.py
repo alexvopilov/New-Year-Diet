@@ -84,3 +84,11 @@ def cost(person):
     return abs(u - total_calories_per_week), abs(tot_prot - gram_prot), abs(tot_fat - gram_fat), abs(tot_carb - gram_carb),
 
 
+# In[9]:
+
+
+weights = (-1, -1/0.3, -5, -2)
+creator.create("FitnessMin", base.Fitness, weights=weights)
+creator.create("Person", list, fitness=creator.FitnessMin)
+
+
