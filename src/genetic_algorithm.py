@@ -68,7 +68,7 @@ carb_data = list(cal_data['Gram_Carb'])
 
 
 def purchases():
-    return random.choices( range(0, 15), k = 10)
+    return random.choices( range(0, 22), k = len(products))
 
 
 # In[8]:
@@ -207,11 +207,4 @@ products['multivariate_cal'] = products['multivariate_choice'] * products['Calor
 # In[20]:
 
 
-products[['Name', 'multivariate_choice']]
-
-
-# In[ ]:
-
-
-
-
+products[['Name', 'multivariate_choice', 'multivariate_cal']]
