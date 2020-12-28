@@ -63,3 +63,11 @@ prot_data = list(cal_data['Gram_Prot'])
 fat_data = list(cal_data['Gram_Fat'])
 carb_data = list(cal_data['Gram_Carb'])
 
+
+# In[7]:
+
+
+def purchases():
+    return random.choices( range(0, 15), k = 10)
+
+
