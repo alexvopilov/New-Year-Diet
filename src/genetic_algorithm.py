@@ -71,3 +71,16 @@ def purchases():
     return random.choices( range(0, 15), k = 10)
 
 
+# In[8]:
+
+
+def cost(person):
+    person = person[0]
+    tot_prot = sum(x*y for x,y in zip(prot_data,person))
+    tot_fat = sum(x*y for x,y in zip(fat_data,person))
+    tot_carb = sum(x*y for x,y in zip(carb_data,person))
+    u = prot_cal_p_gram * tot_prot + carb_cal_p_gram * tot_carb + fat_cal_p_gram * tot_fat
+    
+    return abs(u - total_calories_per_week), abs(tot_prot - gram_prot), abs(tot_fat - gram_fat), abs(tot_carb - gram_carb),
+
+
