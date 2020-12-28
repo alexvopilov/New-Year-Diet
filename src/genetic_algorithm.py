@@ -172,6 +172,10 @@ while generation < 5000:
     for ind, fit in zip(invalid_ind, fitnesses):
         ind.fitness.values = fit
     pop[:] = offspring
+    
+    # Отбор
+    fits = [ind.fitness.values[0] for ind in pop]
+    
     length = len(pop)
     mean = sum(fits) / length
     _sum = sum(x*x for x in fits)
@@ -182,4 +186,9 @@ while generation < 5000:
     elif generation == 10:
         print("...")
 
+
+# In[18]:
+
+
+best = pop[np.argmin([toolbox.cost(x) for x in pop])]
 
