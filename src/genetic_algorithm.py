@@ -166,6 +166,12 @@ while generation < 5000:
             toolbox.mutate(mutant[0])
             del mutant.fitness.values
             
+    # Оценивание
+    invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
+    fitnesses = map(toolbox.cost, invalid_ind)
+    for ind, fit in zip(invalid_ind, fitnesses):
+        ind.fitness.values = fit
+    pop[:] = offspring
     length = len(pop)
     mean = sum(fits) / length
     _sum = sum(x*x for x in fits)
