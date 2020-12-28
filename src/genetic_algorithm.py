@@ -144,3 +144,22 @@ fits = [ind.fitness.values[0] for ind in pop]
 # In[17]:
 
 
+generation = 0
+while generation < 5000:
+    generation+=1
+    if generation < 10 or generation > 4890:
+        print("-- Поколение %i --" % generation)
+    
+    offspring = toolbox.select(pop, len(pop))
+    offspring = list(map(toolbox.clone, offspring))
+    length = len(pop)
+    mean = sum(fits) / length
+    _sum = sum(x*x for x in fits)
+    std = abs(_sum / length - mean**2)**0.5
+    
+    if generation < 10 or generation > 4890:
+        print(min(fits), max(fits), mean, std)
+    elif generation == 10:
+        print("...")
+
+
