@@ -117,3 +117,30 @@ toolbox.register("select", tools.selTournament, tournsize=3)
 
 
 pop = toolbox.population(n=100)
+
+
+# In[14]:
+
+
+fitnesses = list(map(toolbox.cost, pop))
+for ind, fit in zip(pop, fitnesses):
+    ind.fitness.values = fit
+
+
+# In[15]:
+
+
+# CXPB вероятность скрещивания
+# MUTPB вероятность мутации
+CXPB, MUTPB = 0.3, 0.5
+
+
+# In[16]:
+
+
+fits = [ind.fitness.values[0] for ind in pop]
+
+
+# In[17]:
+
+
