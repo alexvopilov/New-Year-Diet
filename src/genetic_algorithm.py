@@ -92,3 +92,28 @@ creator.create("FitnessMin", base.Fitness, weights=weights)
 creator.create("Person", list, fitness=creator.FitnessMin)
 
 
+# In[10]:
+
+
+toolbox = base.Toolbox()
+
+
+# In[11]:
+
+
+toolbox.register("purchases", purchases)
+toolbox.register("person", tools.initRepeat, creator.Person, toolbox.purchases, n=1)
+toolbox.register("population", tools.initRepeat, list, toolbox.person)
+
+toolbox.register("cost", cost)
+toolbox.register("mate", tools.cxTwoPoint)
+toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
+toolbox.register("select", tools.selTournament, tournsize=3)
+
+toolbox.register("cost", cost)
+toolbox.register("mate", tools.cxTwoPoint)
+toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
+toolbox.register("select", tools.selTournament, tournsize=3)
+
+
+pop = toolbox.population(n=100)
