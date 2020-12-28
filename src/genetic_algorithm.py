@@ -152,6 +152,14 @@ while generation < 5000:
     
     offspring = toolbox.select(pop, len(pop))
     offspring = list(map(toolbox.clone, offspring))
+    
+    # Скрещивание
+    for child1, child2 in zip(offspring[::2], offspring[1::2]):
+        if random.random() < CXPB:
+            toolbox.mate(child1[0], child2[0])
+            del child1.fitness.values
+            del child2.fitness.values
+            
     length = len(pop)
     mean = sum(fits) / length
     _sum = sum(x*x for x in fits)
