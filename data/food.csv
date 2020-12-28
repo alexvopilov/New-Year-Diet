@@ -2,13 +2,13 @@ Name,Units Min,Units Max,Calories,Gram_Prot,Gram_Fat,Gram_Carb
 Banana,0,5,89,1,0,23
 Mandarin,0,8,40,1,0,10
 Apple,0,3,52,0.3,0.3,13.8
-Chocolate,0,3,230,3,13,25
-Olivier salad,0,10,580,24,44,19
-Cutlet,0,10,108,18,1.3,6
-Aspic,0,5,257,26,15.5,3.6
+Chocolate,0,6,510,6,31,47
+Olivier salad,0,21,173,6,15,8
+Cutlet,0,14,286,13,22,9.6
+Aspic,0,5,182,15,13,2.2
 Champagne,0,10,88,0,0,1.7
 Orange,0,8,43,0.9,0.2,8.1
-Potatoes,0,10,91,3.4,1.8,14.6
-Herring,0,5,209,8,18.2,3.7
-Crab salad,0,6,128,9.2,7.4,5.9
-Napoleon cake,0,8,372,6.46,22.3,36.22
+Potatoes,0,15,91,3.4,1.8,15
+Herring,0,11,193,6.8,15,6.4
+Crab salad,0,18,148,9.2,7.4,10
+Napoleon cake,0,8,400,6.46,25.3,36.22
