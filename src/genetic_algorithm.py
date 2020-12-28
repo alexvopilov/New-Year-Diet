@@ -192,3 +192,26 @@ while generation < 5000:
 
 best = pop[np.argmin([toolbox.cost(x) for x in pop])]
 
+
+# In[19]:
+
+
+products['multivariate_choice'] = pd.Series(best[0])
+
+products['multivariate_gram_prot'] = products['multivariate_choice'] * products['Gram_Prot']
+products['multivariate_gram_fat'] = products['multivariate_choice'] * products['Gram_Fat']
+products['multivariate_gram_carb'] = products['multivariate_choice'] * products['Gram_Carb']
+products['multivariate_cal'] = products['multivariate_choice'] * products['Calories']
+
+
+# In[20]:
+
+
+products[['Name', 'multivariate_choice']]
+
+
+# In[ ]:
+
+
+
+
