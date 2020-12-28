@@ -160,6 +160,12 @@ while generation < 5000:
             del child1.fitness.values
             del child2.fitness.values
             
+    # Мутирование
+    for mutant in offspring:
+        if random.random() < MUTPB:
+            toolbox.mutate(mutant[0])
+            del mutant.fitness.values
+            
     length = len(pop)
     mean = sum(fits) / length
     _sum = sum(x*x for x in fits)
