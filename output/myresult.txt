@@ -1,0 +1,18 @@
+15 Cutlets / 11
+11 Olivier / 9
+8 Potatoes / 11
+5 Mandarin / 8
+2 Orange / 0
+4 Cake / 10
+2 Banana / 8
+3 Sweet / 9
+
+
+
+4,3,3,3,2,6,6,6
+/
+11,9,11,8,0,10,8,9
+=
+36,33,27,37,30,60,75,66
+----
+45,5% Error
